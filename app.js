@@ -8,7 +8,9 @@ function errorhandler() {
 
 function eventhandler() {
     var s = textinput.value;
-    fetch("https://api.funtranslations.com/translate/" + "?" + "text=" + s)
+    fetch(
+            "https://api.funtranslations.com/translate/minion.json" + "?" + "text=" + s
+        )
         .then((response) => response.json())
         .then((json) => {
             var translated = json.contents.translated;
